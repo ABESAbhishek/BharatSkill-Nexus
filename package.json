@@ -1,0 +1,27 @@
+{
+  "name": "bharatskill-nexus",
+  "version": "1.0.0",
+  "description": "BharatSkill Nexus - An Agentic Skill-to-Opportunity Ecosystem powered by x402 & Algorand",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "build": "npm run build:server && npm run build:client",
+    "build:server": "npm run build --prefix server",
+    "build:client": "npm run build --prefix client",
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": [
+    "bharatskill-nexus",
+    "agentic-ai",
+    "algorand",
+    "x402",
+    "hackathon"
+  ],
+  "author": "BharatSkill Nexus Team",
+  "license": "MIT"
+}

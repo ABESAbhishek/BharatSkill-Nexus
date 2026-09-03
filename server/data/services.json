@@ -1,0 +1,70 @@
+[
+  {
+    "id": "srv_deep_intelligence",
+    "title": "Deep Career Intelligence Report",
+    "iconName": "Brain",
+    "category": "Strategic Analysis",
+    "description": "Comprehensive multi-dimensional career trajectory diagnosis, competitive peer positioning, and salary/stipend bracket estimations.",
+    "priceInr": 5,
+    "priceAlgo": "0.10 ALGO",
+    "executionTime": "~1.2s",
+    "features": [
+      "Target opportunity competitive ranking",
+      "Salary & stipend bracket estimations",
+      "Detailed skill positioning vs 5,000+ candidates",
+      "Curated 6-month specialized roadmap"
+    ],
+    "samplePrompt": "Synthesize end-to-end career positioning for student transitioning into Agentic AI & Web3."
+  },
+  {
+    "id": "srv_opp_optimization",
+    "title": "Opportunity Application Optimization",
+    "iconName": "Target",
+    "category": "Match Optimization",
+    "description": "Customizes your Skill Identity graph and generates targeted technical pitch statements for specific hackathons and internships.",
+    "priceInr": 3,
+    "priceAlgo": "0.06 ALGO",
+    "executionTime": "~0.8s",
+    "features": [
+      "Opportunity-specific skill graph alignment",
+      "Pre-interview simulation questions",
+      "Tailored technical pitch generation",
+      "Prerequisite gap closing checklist"
+    ],
+    "samplePrompt": "Generate tailored technical applicant pitch for Full-Stack Developer Intern."
+  },
+  {
+    "id": "srv_adv_roadmap",
+    "title": "Advanced Growth Roadmap & Projects",
+    "iconName": "Map",
+    "category": "Roadmap Extension",
+    "description": "Generates complete repository starter boilerplates, weekly milestone schedules, and priority skill dependencies.",
+    "priceInr": 5,
+    "priceAlgo": "0.10 ALGO",
+    "executionTime": "~1.5s",
+    "features": [
+      "Hands-on repository boilerplate architectures",
+      "Milestone-based project difficulty scoring",
+      "Algorand & AI multi-agent code templates",
+      "Automated unit testing verification guide"
+    ],
+    "samplePrompt": "Generate full repository starter architectures for multi-agent x402 micro-escrows."
+  },
+  {
+    "id": "srv_instant_diagnostic",
+    "title": "Instant Agent Re-Evaluation",
+    "iconName": "Zap",
+    "category": "Diagnostic",
+    "description": "Re-indexes your verified skills and recalibrates opportunity readiness in real time with high-precision score updates.",
+    "priceInr": 2,
+    "priceAlgo": "0.04 ALGO",
+    "executionTime": "~0.4s",
+    "features": [
+      "Sub-second candidate graph re-indexing",
+      "Immediate match score adjustments",
+      "Real-time skill gap recalculation",
+      "Opportunity unlock status refreshes"
+    ],
+    "samplePrompt": "Recalibrate opportunity readiness following new project addition."
+  }
+]

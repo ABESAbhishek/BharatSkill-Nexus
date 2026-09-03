@@ -1,0 +1,708 @@
+[
+  {
+    "id": "analysis_1788290548978_lk0g",
+    "userId": "test_user_aarav",
+    "readinessScore": 78,
+    "readinessLabel": "Opportunity Ready",
+    "summary": "Aarav Sharma demonstrates a solid foundation with 2 verified strengths in Python, React. To achieve your target goal of \"Get an Internship\" in Artificial Intelligence & Web Development, closing gaps in Machine Learning and Data Structures will elevate your opportunity readiness into the top tier.",
+    "strengths": [
+      "Python",
+      "React"
+    ],
+    "growingAreas": [
+      "JavaScript"
+    ],
+    "skillGaps": [
+      "Machine Learning",
+      "Data Structures",
+      "Deep Learning",
+      "Statistics",
+      "Prompt Engineering",
+      "Vector Databases",
+      "TypeScript",
+      "Node.js",
+      "REST APIs",
+      "Next.js",
+      "Tailwind CSS",
+      "SQL",
+      "Git/GitHub"
+    ],
+    "recommendedSkills": [
+      "Machine Learning",
+      "Data Structures",
+      "Deep Learning",
+      "Statistics"
+    ],
+    "growthRoadmap": [
+      {
+        "phase": "PHASE 01",
+        "title": "Foundation & Gap Closing",
+        "subtitle": "Close critical knowledge bottlenecks",
+        "description": "Target high-leverage missing skills in Artificial Intelligence, focusing specifically on Machine Learning.",
+        "actions": [
+          "Master foundational syntax and core paradigms for Machine Learning",
+          "Review open-source codebases demonstrating Machine Learning best practices",
+          "Complete diagnostic self-assessments in the BharatSkill peer guild"
+        ]
+      },
+      {
+        "phase": "PHASE 02",
+        "title": "Practical Project Build",
+        "subtitle": "Translate knowledge into demonstrable proof",
+        "description": "Build an end-to-end full-stack project combining your strength in Python with newly acquired Machine Learning.",
+        "actions": [
+          "Architect a live prototype solving a practical problem in Artificial Intelligence",
+          "Integrate Data Structures and write comprehensive automated integration tests",
+          "Publish a clean, documented repository with an interactive live demo"
+        ]
+      },
+      {
+        "phase": "PHASE 03",
+        "title": "Peer Validation & Community Review",
+        "subtitle": "Validate with peer feedback and SkillCredits",
+        "description": "Collaborate within BharatSkill Nexus peer learning rooms, perform code reviews, and earn SkillCredits.",
+        "actions": [
+          "Submit your project for peer guild code review and score validation",
+          "Mentor junior peers on Python to earn community endorsement badges",
+          "Refactor architecture based on community feedback to harden security and performance"
+        ]
+      },
+      {
+        "phase": "PHASE 04",
+        "title": "Opportunity Matching & Application",
+        "subtitle": "Unlock target opportunities for: Get an Internship",
+        "description": "Leverage AI Agent matchmaking to connect directly with verified hackathons, internships, and bounties matching your verified skill graph.",
+        "actions": [
+          "Submit verified portfolio to AI-curated hackathon teams and hiring bounties",
+          "Apply to high-fit Get an Internship openings with your dynamic verified skill graph",
+          "Execute pre-interview agentic simulations to prepare for technical screenings"
+        ]
+      }
+    ],
+    "opportunityMatches": [
+      {
+        "id": "opp_1",
+        "title": "Junior Full-Stack Developer Intern",
+        "category": "Internship",
+        "matchPercentage": 86,
+        "stipendOrReward": "₹25,000 / month",
+        "requiredSkills": [
+          "React",
+          "Node.js",
+          "REST APIs",
+          "Git/GitHub"
+        ],
+        "fitReason": "Strong alignment with your Python & React profile."
+      },
+      {
+        "id": "opp_2",
+        "title": "Agentic AI & Web3 Innovation Bounty",
+        "category": "Hackathon / Bounty",
+        "matchPercentage": 83,
+        "stipendOrReward": "₹1,50,000 Prize Pool",
+        "requiredSkills": [
+          "Python",
+          "AI Agents",
+          "API Integration",
+          "Smart Contracts"
+        ],
+        "fitReason": "Directly matches your interest in AI."
+      },
+      {
+        "id": "opp_3",
+        "title": "Algorand Ecosystem Developer Fellowship",
+        "category": "Fellowship",
+        "matchPercentage": 78,
+        "stipendOrReward": "₹40,000 Grant",
+        "requiredSkills": [
+          "Algorand Fundamentals",
+          "PyTeal",
+          "Web3 Concepts",
+          "TypeScript"
+        ],
+        "fitReason": "Sponsored opportunity tailored for aspiring decentralized technology builders."
+      },
+      {
+        "id": "opp_4",
+        "title": "Open Source Community Maintainer",
+        "category": "Open Source Gig",
+        "matchPercentage": 74,
+        "stipendOrReward": "SkillCredits + Bounty",
+        "requiredSkills": [
+          "Communication",
+          "Code Review",
+          "Git/GitHub",
+          "Problem Solving"
+        ],
+        "fitReason": "Matches your preferred learning style: Build Projects."
+      }
+    ],
+    "analyzedAt": "2026-09-01T19:22:28.978Z"
+  },
+  {
+    "id": "analysis_1788290912887_xi9r",
+    "userId": "usr_aarav",
+    "readinessScore": 78,
+    "readinessLabel": "Opportunity Ready",
+    "summary": "Aarav Sharma demonstrates a solid foundation with 2 verified strengths in Python, React. To achieve your target goal of \"Get an Internship\" in Artificial Intelligence & Web Development, closing gaps in Machine Learning and Data Structures will elevate your opportunity readiness into the top tier.",
+    "strengths": [
+      "Python",
+      "React"
+    ],
+    "growingAreas": [
+      "JavaScript"
+    ],
+    "skillGaps": [
+      "Machine Learning",
+      "Data Structures",
+      "Deep Learning",
+      "Statistics",
+      "Prompt Engineering",
+      "Vector Databases",
+      "TypeScript",
+      "Node.js",
+      "REST APIs",
+      "Next.js",
+      "Tailwind CSS",
+      "SQL",
+      "Git/GitHub"
+    ],
+    "recommendedSkills": [
+      "Machine Learning",
+      "Data Structures",
+      "Deep Learning",
+      "Statistics"
+    ],
+    "growthRoadmap": [
+      {
+        "phase": "PHASE 01",
+        "title": "Foundation & Gap Closing",
+        "subtitle": "Close critical knowledge bottlenecks",
+        "description": "Target high-leverage missing skills in Artificial Intelligence, focusing specifically on Machine Learning.",
+        "actions": [
+          "Master foundational syntax and core paradigms for Machine Learning",
+          "Review open-source codebases demonstrating Machine Learning best practices",
+          "Complete diagnostic self-assessments in the BharatSkill peer guild"
+        ]
+      },
+      {
+        "phase": "PHASE 02",
+        "title": "Practical Project Build",
+        "subtitle": "Translate knowledge into demonstrable proof",
+        "description": "Build an end-to-end full-stack project combining your strength in Python with newly acquired Machine Learning.",
+        "actions": [
+          "Architect a live prototype solving a practical problem in Artificial Intelligence",
+          "Integrate Data Structures and write comprehensive automated integration tests",
+          "Publish a clean, documented repository with an interactive live demo"
+        ]
+      },
+      {
+        "phase": "PHASE 03",
+        "title": "Peer Validation & Community Review",
+        "subtitle": "Validate with peer feedback and SkillCredits",
+        "description": "Collaborate within BharatSkill Nexus peer learning rooms, perform code reviews, and earn SkillCredits.",
+        "actions": [
+          "Submit your project for peer guild code review and score validation",
+          "Mentor junior peers on Python to earn community endorsement badges",
+          "Refactor architecture based on community feedback to harden security and performance"
+        ]
+      },
+      {
+        "phase": "PHASE 04",
+        "title": "Opportunity Matching & Application",
+        "subtitle": "Unlock target opportunities for: Get an Internship",
+        "description": "Leverage AI Agent matchmaking to connect directly with verified hackathons, internships, and bounties matching your verified skill graph.",
+        "actions": [
+          "Submit verified portfolio to AI-curated hackathon teams and hiring bounties",
+          "Apply to high-fit Get an Internship openings with your dynamic verified skill graph",
+          "Execute pre-interview agentic simulations to prepare for technical screenings"
+        ]
+      }
+    ],
+    "opportunityMatches": [
+      {
+        "id": "opp_1",
+        "title": "Junior Full-Stack Developer Intern",
+        "category": "Internship",
+        "matchPercentage": 86,
+        "stipendOrReward": "₹25,000 / month",
+        "requiredSkills": [
+          "React",
+          "Node.js",
+          "REST APIs",
+          "Git/GitHub"
+        ],
+        "fitReason": "Strong alignment with your Python & React profile."
+      },
+      {
+        "id": "opp_2",
+        "title": "Agentic AI & Web3 Innovation Bounty",
+        "category": "Hackathon / Bounty",
+        "matchPercentage": 83,
+        "stipendOrReward": "₹1,50,000 Prize Pool",
+        "requiredSkills": [
+          "Python",
+          "AI Agents",
+          "API Integration",
+          "Smart Contracts"
+        ],
+        "fitReason": "Directly matches your interest in AI."
+      },
+      {
+        "id": "opp_3",
+        "title": "Algorand Ecosystem Developer Fellowship",
+        "category": "Fellowship",
+        "matchPercentage": 78,
+        "stipendOrReward": "₹40,000 Grant",
+        "requiredSkills": [
+          "Algorand Fundamentals",
+          "PyTeal",
+          "Web3 Concepts",
+          "TypeScript"
+        ],
+        "fitReason": "Sponsored opportunity tailored for aspiring decentralized technology builders."
+      },
+      {
+        "id": "opp_4",
+        "title": "Open Source Community Maintainer",
+        "category": "Open Source Gig",
+        "matchPercentage": 74,
+        "stipendOrReward": "SkillCredits + Bounty",
+        "requiredSkills": [
+          "Communication",
+          "Code Review",
+          "Git/GitHub",
+          "Problem Solving"
+        ],
+        "fitReason": "Matches your preferred learning style: Build Projects."
+      }
+    ],
+    "analyzedAt": "2026-09-01T19:28:32.887Z"
+  },
+  {
+    "id": "analysis_1788290912985_o1hl",
+    "userId": "usr_rohan",
+    "readinessScore": 67,
+    "readinessLabel": "Opportunity Ready",
+    "summary": "Rohan Verma demonstrates a solid foundation with 2 verified strengths in Figma, UI/UX. To achieve your target goal of \"Freelance\" in Blockchain & Product Design, closing gaps in Smart Contracts and Algorand Fundamentals will elevate your opportunity readiness into the top tier.",
+    "strengths": [
+      "Figma",
+      "UI/UX"
+    ],
+    "growingAreas": [
+      "Graphic Design"
+    ],
+    "skillGaps": [
+      "Smart Contracts",
+      "Algorand Fundamentals",
+      "Web3 Concepts",
+      "PyTeal",
+      "x402 Micropayments",
+      "Cryptography Basics",
+      "User Research",
+      "Wireframing",
+      "Design Systems",
+      "Interactive Prototyping"
+    ],
+    "recommendedSkills": [
+      "Smart Contracts",
+      "Algorand Fundamentals",
+      "Web3 Concepts",
+      "PyTeal"
+    ],
+    "growthRoadmap": [
+      {
+        "phase": "PHASE 01",
+        "title": "Foundation & Gap Closing",
+        "subtitle": "Close critical knowledge bottlenecks",
+        "description": "Target high-leverage missing skills in Blockchain, focusing specifically on Smart Contracts.",
+        "actions": [
+          "Master foundational syntax and core paradigms for Smart Contracts",
+          "Review open-source codebases demonstrating Smart Contracts best practices",
+          "Complete diagnostic self-assessments in the BharatSkill peer guild"
+        ]
+      },
+      {
+        "phase": "PHASE 02",
+        "title": "Practical Project Build",
+        "subtitle": "Translate knowledge into demonstrable proof",
+        "description": "Build an end-to-end full-stack project combining your strength in Figma with newly acquired Smart Contracts.",
+        "actions": [
+          "Architect a live prototype solving a practical problem in Blockchain",
+          "Integrate Algorand Fundamentals and write comprehensive automated integration tests",
+          "Publish a clean, documented repository with an interactive live demo"
+        ]
+      },
+      {
+        "phase": "PHASE 03",
+        "title": "Peer Validation & Community Review",
+        "subtitle": "Validate with peer feedback and SkillCredits",
+        "description": "Collaborate within BharatSkill Nexus peer learning rooms, perform code reviews, and earn SkillCredits.",
+        "actions": [
+          "Submit your project for peer guild code review and score validation",
+          "Mentor junior peers on Figma to earn community endorsement badges",
+          "Refactor architecture based on community feedback to harden security and performance"
+        ]
+      },
+      {
+        "phase": "PHASE 04",
+        "title": "Opportunity Matching & Application",
+        "subtitle": "Unlock target opportunities for: Freelance",
+        "description": "Leverage AI Agent matchmaking to connect directly with verified hackathons, internships, and bounties matching your verified skill graph.",
+        "actions": [
+          "Submit verified portfolio to AI-curated hackathon teams and hiring bounties",
+          "Apply to high-fit Freelance openings with your dynamic verified skill graph",
+          "Execute pre-interview agentic simulations to prepare for technical screenings"
+        ]
+      }
+    ],
+    "opportunityMatches": [
+      {
+        "id": "opp_1",
+        "title": "Junior Full-Stack Developer Intern",
+        "category": "Internship",
+        "matchPercentage": 75,
+        "stipendOrReward": "₹25,000 / month",
+        "requiredSkills": [
+          "React",
+          "Node.js",
+          "REST APIs",
+          "Git/GitHub"
+        ],
+        "fitReason": "Strong alignment with your Figma & UI/UX profile."
+      },
+      {
+        "id": "opp_2",
+        "title": "Agentic AI & Web3 Innovation Bounty",
+        "category": "Hackathon / Bounty",
+        "matchPercentage": 72,
+        "stipendOrReward": "₹1,50,000 Prize Pool",
+        "requiredSkills": [
+          "Python",
+          "AI Agents",
+          "API Integration",
+          "Smart Contracts"
+        ],
+        "fitReason": "Directly matches your interest in Modern Software."
+      },
+      {
+        "id": "opp_3",
+        "title": "Algorand Ecosystem Developer Fellowship",
+        "category": "Fellowship",
+        "matchPercentage": 67,
+        "stipendOrReward": "₹40,000 Grant",
+        "requiredSkills": [
+          "Algorand Fundamentals",
+          "PyTeal",
+          "Web3 Concepts",
+          "TypeScript"
+        ],
+        "fitReason": "Sponsored opportunity tailored for aspiring decentralized technology builders."
+      },
+      {
+        "id": "opp_4",
+        "title": "Open Source Community Maintainer",
+        "category": "Open Source Gig",
+        "matchPercentage": 63,
+        "stipendOrReward": "SkillCredits + Bounty",
+        "requiredSkills": [
+          "Communication",
+          "Code Review",
+          "Git/GitHub",
+          "Problem Solving"
+        ],
+        "fitReason": "Matches your preferred learning style: Learn from Peers."
+      }
+    ],
+    "analyzedAt": "2026-09-01T19:28:32.985Z"
+  },
+  {
+    "id": "analysis_1788330350818_khzz",
+    "userId": "bsn_demo_user",
+    "readinessScore": 92,
+    "readinessLabel": "Highly Prepared",
+    "summary": "Aarav Sharma demonstrates a solid foundation with 4 verified strengths in Python, React, Node.js. To achieve your target goal of \"Get an Internship\" in Artificial Intelligence & Web Development & Blockchain, closing gaps in Machine Learning and Data Structures will elevate your opportunity readiness into the top tier.",
+    "strengths": [
+      "Python",
+      "React",
+      "Node.js",
+      "TypeScript"
+    ],
+    "growingAreas": [
+      "UI/UX"
+    ],
+    "skillGaps": [
+      "Machine Learning",
+      "Data Structures",
+      "Deep Learning",
+      "Statistics",
+      "Prompt Engineering",
+      "Vector Databases",
+      "REST APIs",
+      "Next.js",
+      "Tailwind CSS",
+      "SQL",
+      "Git/GitHub",
+      "Smart Contracts",
+      "Algorand Fundamentals",
+      "Web3 Concepts",
+      "PyTeal",
+      "x402 Micropayments",
+      "Cryptography Basics"
+    ],
+    "recommendedSkills": [
+      "Machine Learning",
+      "Data Structures",
+      "Deep Learning",
+      "Statistics"
+    ],
+    "growthRoadmap": [
+      {
+        "phase": "PHASE 01",
+        "title": "Foundation & Gap Closing",
+        "subtitle": "Close critical knowledge bottlenecks",
+        "description": "Target high-leverage missing skills in Artificial Intelligence, focusing specifically on Machine Learning.",
+        "actions": [
+          "Master foundational syntax and core paradigms for Machine Learning",
+          "Review open-source codebases demonstrating Machine Learning best practices",
+          "Complete diagnostic self-assessments in the BharatSkill peer guild"
+        ]
+      },
+      {
+        "phase": "PHASE 02",
+        "title": "Practical Project Build",
+        "subtitle": "Translate knowledge into demonstrable proof",
+        "description": "Build an end-to-end full-stack project combining your strength in Python with newly acquired Machine Learning.",
+        "actions": [
+          "Architect a live prototype solving a practical problem in Artificial Intelligence",
+          "Integrate Data Structures and write comprehensive automated integration tests",
+          "Publish a clean, documented repository with an interactive live demo"
+        ]
+      },
+      {
+        "phase": "PHASE 03",
+        "title": "Peer Validation & Community Review",
+        "subtitle": "Validate with peer feedback and SkillCredits",
+        "description": "Collaborate within BharatSkill Nexus peer learning rooms, perform code reviews, and earn SkillCredits.",
+        "actions": [
+          "Submit your project for peer guild code review and score validation",
+          "Mentor junior peers on Python to earn community endorsement badges",
+          "Refactor architecture based on community feedback to harden security and performance"
+        ]
+      },
+      {
+        "phase": "PHASE 04",
+        "title": "Opportunity Matching & Application",
+        "subtitle": "Unlock target opportunities for: Get an Internship",
+        "description": "Leverage AI Agent matchmaking to connect directly with verified hackathons, internships, and bounties matching your verified skill graph.",
+        "actions": [
+          "Submit verified portfolio to AI-curated hackathon teams and hiring bounties",
+          "Apply to high-fit Get an Internship openings with your dynamic verified skill graph",
+          "Execute pre-interview agentic simulations to prepare for technical screenings"
+        ]
+      }
+    ],
+    "opportunityMatches": [
+      {
+        "id": "opp_1",
+        "title": "Junior Full-Stack Developer Intern",
+        "category": "Internship",
+        "matchPercentage": 98,
+        "stipendOrReward": "₹25,000 / month",
+        "requiredSkills": [
+          "React",
+          "Node.js",
+          "REST APIs",
+          "Git/GitHub"
+        ],
+        "fitReason": "Strong alignment with your Python & React profile."
+      },
+      {
+        "id": "opp_2",
+        "title": "Agentic AI & Web3 Innovation Bounty",
+        "category": "Hackathon / Bounty",
+        "matchPercentage": 95,
+        "stipendOrReward": "₹1,50,000 Prize Pool",
+        "requiredSkills": [
+          "Python",
+          "AI Agents",
+          "API Integration",
+          "Smart Contracts"
+        ],
+        "fitReason": "Directly matches your interest in AI."
+      },
+      {
+        "id": "opp_3",
+        "title": "Algorand Ecosystem Developer Fellowship",
+        "category": "Fellowship",
+        "matchPercentage": 92,
+        "stipendOrReward": "₹40,000 Grant",
+        "requiredSkills": [
+          "Algorand Fundamentals",
+          "PyTeal",
+          "Web3 Concepts",
+          "TypeScript"
+        ],
+        "fitReason": "Sponsored opportunity tailored for aspiring decentralized technology builders."
+      },
+      {
+        "id": "opp_4",
+        "title": "Open Source Community Maintainer",
+        "category": "Open Source Gig",
+        "matchPercentage": 88,
+        "stipendOrReward": "SkillCredits + Bounty",
+        "requiredSkills": [
+          "Communication",
+          "Code Review",
+          "Git/GitHub",
+          "Problem Solving"
+        ],
+        "fitReason": "Matches your preferred learning style: Build Projects."
+      }
+    ],
+    "analyzedAt": "2026-09-02T06:25:50.818Z"
+  },
+  {
+    "id": "analysis_1788335652919_noic",
+    "userId": "bsn_1788335647110_8lta7",
+    "readinessScore": 78,
+    "readinessLabel": "Opportunity Ready",
+    "summary": "Abhishek Kumar Singh demonstrates a solid foundation with 3 verified strengths in Python, React, Tailwind CSS. To achieve your target goal of \"Find a Job\" in Artificial Intelligence & Web Development, closing gaps in Machine Learning and Data Structures will elevate your opportunity readiness into the top tier.",
+    "strengths": [
+      "Python",
+      "React",
+      "Tailwind CSS"
+    ],
+    "growingAreas": [
+      "JavaScript",
+      "C++",
+      "Graphic Design",
+      "Public Speaking"
+    ],
+    "skillGaps": [
+      "Machine Learning",
+      "Data Structures",
+      "Deep Learning",
+      "Statistics",
+      "Prompt Engineering",
+      "Vector Databases",
+      "TypeScript",
+      "Node.js",
+      "REST APIs",
+      "Next.js",
+      "SQL",
+      "Git/GitHub"
+    ],
+    "recommendedSkills": [
+      "Machine Learning",
+      "Data Structures",
+      "Deep Learning",
+      "Statistics"
+    ],
+    "growthRoadmap": [
+      {
+        "phase": "PHASE 01",
+        "title": "Foundation & Gap Closing",
+        "subtitle": "Close critical knowledge bottlenecks",
+        "description": "Target high-leverage missing skills in Artificial Intelligence, focusing specifically on Machine Learning.",
+        "actions": [
+          "Master foundational syntax and core paradigms for Machine Learning",
+          "Review open-source codebases demonstrating Machine Learning best practices",
+          "Complete diagnostic self-assessments in the BharatSkill peer guild"
+        ]
+      },
+      {
+        "phase": "PHASE 02",
+        "title": "Practical Project Build",
+        "subtitle": "Translate knowledge into demonstrable proof",
+        "description": "Build an end-to-end full-stack project combining your strength in Python with newly acquired Machine Learning.",
+        "actions": [
+          "Architect a live prototype solving a practical problem in Artificial Intelligence",
+          "Integrate Data Structures and write comprehensive automated integration tests",
+          "Publish a clean, documented repository with an interactive live demo"
+        ]
+      },
+      {
+        "phase": "PHASE 03",
+        "title": "Peer Validation & Community Review",
+        "subtitle": "Validate with peer feedback and SkillCredits",
+        "description": "Collaborate within BharatSkill Nexus peer learning rooms, perform code reviews, and earn SkillCredits.",
+        "actions": [
+          "Submit your project for peer guild code review and score validation",
+          "Mentor junior peers on Python to earn community endorsement badges",
+          "Refactor architecture based on community feedback to harden security and performance"
+        ]
+      },
+      {
+        "phase": "PHASE 04",
+        "title": "Opportunity Matching & Application",
+        "subtitle": "Unlock target opportunities for: Find a Job",
+        "description": "Leverage AI Agent matchmaking to connect directly with verified hackathons, internships, and bounties matching your verified skill graph.",
+        "actions": [
+          "Submit verified portfolio to AI-curated hackathon teams and hiring bounties",
+          "Apply to high-fit Find a Job openings with your dynamic verified skill graph",
+          "Execute pre-interview agentic simulations to prepare for technical screenings"
+        ]
+      }
+    ],
+    "opportunityMatches": [
+      {
+        "id": "opp_1",
+        "title": "Junior Full-Stack Developer Intern",
+        "category": "Internship",
+        "matchPercentage": 86,
+        "stipendOrReward": "₹25,000 / month",
+        "requiredSkills": [
+          "React",
+          "Node.js",
+          "REST APIs",
+          "Git/GitHub"
+        ],
+        "fitReason": "Strong alignment with your Python & React profile."
+      },
+      {
+        "id": "opp_2",
+        "title": "Agentic AI & Web3 Innovation Bounty",
+        "category": "Hackathon / Bounty",
+        "matchPercentage": 83,
+        "stipendOrReward": "₹1,50,000 Prize Pool",
+        "requiredSkills": [
+          "Python",
+          "AI Agents",
+          "API Integration",
+          "Smart Contracts"
+        ],
+        "fitReason": "Directly matches your interest in AI."
+      },
+      {
+        "id": "opp_3",
+        "title": "Algorand Ecosystem Developer Fellowship",
+        "category": "Fellowship",
+        "matchPercentage": 78,
+        "stipendOrReward": "₹40,000 Grant",
+        "requiredSkills": [
+          "Algorand Fundamentals",
+          "PyTeal",
+          "Web3 Concepts",
+          "TypeScript"
+        ],
+        "fitReason": "Sponsored opportunity tailored for aspiring decentralized technology builders."
+      },
+      {
+        "id": "opp_4",
+        "title": "Open Source Community Maintainer",
+        "category": "Open Source Gig",
+        "matchPercentage": 74,
+        "stipendOrReward": "SkillCredits + Bounty",
+        "requiredSkills": [
+          "Communication",
+          "Code Review",
+          "Git/GitHub",
+          "Problem Solving"
+        ],
+        "fitReason": "Matches your preferred learning style: Build Projects."
+      }
+    ],
+    "analyzedAt": "2026-09-02T07:54:12.919Z"
+  }
+]

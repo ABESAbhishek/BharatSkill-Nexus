@@ -1,0 +1,75 @@
+[
+  {
+    "id": "bsn_1788289918083_9oisd",
+    "name": "Aarav Sharma",
+    "email": "aarav.sharma@example.com",
+    "location": "Bengaluru, India",
+    "education": "Undergraduate",
+    "skills": [
+      "Python",
+      "React",
+      "Node.js",
+      "UI/UX"
+    ],
+    "interests": [
+      "Artificial Intelligence",
+      "Web Development"
+    ],
+    "careerGoal": "Get an Internship",
+    "experienceLevel": "Intermediate",
+    "learningPreference": "Build Projects",
+    "profileStrength": 91,
+    "createdAt": "2026-09-01T19:11:58.081Z",
+    "updatedAt": "2026-09-01T19:11:58.081Z"
+  },
+  {
+    "id": "bsn_1788290250924_adlt4",
+    "name": "Priya Patel",
+    "email": "priya.patel@example.com",
+    "location": "Pune, Maharashtra",
+    "education": "Postgraduate",
+    "skills": [
+      "Figma",
+      "UI/UX",
+      "User Research",
+      "Tailwind CSS",
+      "React"
+    ],
+    "interests": [
+      "Product Design",
+      "Web Development"
+    ],
+    "careerGoal": "Find a Job",
+    "experienceLevel": "Advanced",
+    "learningPreference": "Mentorship",
+    "profileStrength": 96,
+    "createdAt": "2026-09-01T19:17:30.924Z",
+    "updatedAt": "2026-09-01T19:17:30.924Z"
+  },
+  {
+    "id": "bsn_1788335647110_8lta7",
+    "name": "Abhishek Kumar Singh",
+    "email": "abhisheksingh.sr1672@gmail.com",
+    "location": "Lucknow",
+    "education": "Undergraduate",
+    "skills": [
+      "Python",
+      "React",
+      "JavaScript",
+      "C++",
+      "Tailwind CSS",
+      "Graphic Design",
+      "Public Speaking"
+    ],
+    "interests": [
+      "Artificial Intelligence",
+      "Web Development"
+    ],
+    "careerGoal": "Find a Job",
+    "experienceLevel": "Beginner",
+    "learningPreference": "Build Projects",
+    "profileStrength": 96,
+    "createdAt": "2026-09-02T07:54:07.110Z",
+    "updatedAt": "2026-09-02T07:54:07.110Z"
+  }
+]
