@@ -5,6 +5,7 @@ import agentRoutes from './agentRoutes.js';
 import opportunityRoutes from './opportunityRoutes.js';
 import dashboardRoutes from './dashboardRoutes.js';
 import paymentRoutes from './paymentRoutes.js';
+import skillExchangeRoutes from './skillExchangeRoutes.js';
 
 const router = Router();
 
@@ -14,5 +15,6 @@ router.use('/agent', agentRoutes);
 router.use('/opportunities', opportunityRoutes);
 router.use('/dashboard', dashboardRoutes);
 router.use('/payments', paymentRoutes);
+router.use('/skill-exchange', skillExchangeRoutes);
 
 export default router;

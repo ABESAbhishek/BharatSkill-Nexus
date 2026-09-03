@@ -1,51 +1,208 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Users, ArrowLeft, Coins, Award, Clock } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { RefreshCw, PlusCircle, HelpCircle, Users, Coins } from 'lucide-react';
+import { SkillExchangeItem, BookingReceipt, UserProfile } from '../types/api';
+import { fetchSkillExchanges } from '../services/api';
+import SkillExchangeHero from '../components/skillexchange/SkillExchangeHero';
+import SkillExchangeFilter from '../components/skillexchange/SkillExchangeFilter';
+import SkillExchangeCard from '../components/skillexchange/SkillExchangeCard';
+import BookingModal from '../components/skillexchange/BookingModal';
+import CreateExchangeModal from '../components/skillexchange/CreateExchangeModal';
+import EscrowVisualizer from '../components/skillexchange/EscrowVisualizer';
+
+const LOCAL_STORAGE_EXCHANGES = 'bsn_skill_exchanges';
 
 export const SkillExchangePage: React.FC = () => {
+  const [exchanges, setExchanges] = useState<SkillExchangeItem[]>([]);
+  const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Filters
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedType, setSelectedType] = useState<'all' | 'offer' | 'request'>('all');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
+  // Modals
+  const [bookingItem, setBookingItem] = useState<SkillExchangeItem | null>(null);
+  const [bookingModalOpen, setBookingModalOpen] = useState(false);
+  const [createModalOpen, setCreateModalOpen] = useState(false);
+  const [createInitialType, setCreateInitialType] = useState<'offer' | 'request'>('offer');
+
+  useEffect(() => {
+    // 1. Read profile
+    const savedProf = localStorage.getItem('bsn_user_profile');
+    if (savedProf) {
+      try {
+        setUserProfile(JSON.parse(savedProf));
+      } catch (e) {
+        console.error('Error parsing profile:', e);
+      }
+    }
+
+    // 2. Fetch exchanges
+    setIsLoading(true);
+    fetchSkillExchanges()
+      .then(res => {
+        if (res.data && res.data.length > 0) {
+          // Merge with any locally added items
+          const localAdded = localStorage.getItem(LOCAL_STORAGE_EXCHANGES);
+          if (localAdded) {
+            try {
+              const localList = JSON.parse(localAdded) as SkillExchangeItem[];
+              const existingIds = new Set(res.data.map(d => d.id));
+              const uniqueLocal = localList.filter(l => !existingIds.has(l.id));
+              setExchanges([...uniqueLocal, ...res.data]);
+              return;
+            } catch (e) {}
+          }
+          setExchanges(res.data);
+        }
+      })
+      .catch(err => console.error('Failed to load skill exchanges:', err))
+      .finally(() => setIsLoading(false));
+  }, []);
+
+  const handleOpenCreateModal = (type: 'offer' | 'request') => {
+    setCreateInitialType(type);
+    setCreateModalOpen(true);
+  };
+
+  const handleCreated = (newItem: SkillExchangeItem) => {
+    setExchanges(prev => {
+      const updated = [newItem, ...prev];
+      localStorage.setItem(LOCAL_STORAGE_EXCHANGES, JSON.stringify(updated));
+      return updated;
+    });
+  };
+
+  const handleOpenBooking = (item: SkillExchangeItem) => {
+    setBookingItem(item);
+    setBookingModalOpen(true);
+  };
+
+  const handleBookingSuccess = (receipt: BookingReceipt) => {
+    // Optionally trigger a notification or storage event
+    window.dispatchEvent(new Event('storage'));
+  };
+
+  // Categories extraction
+  const categories = ['All', 'Web Development', 'Artificial Intelligence', 'Blockchain', 'Backend Engineering', 'Product Design', 'Data Science'];
+
+  // Filtered List
+  const filteredExchanges = exchanges.filter(item => {
+    // Type Filter
+    if (selectedType !== 'all' && item.type !== selectedType) return false;
+
+    // Category Filter
+    if (selectedCategory !== 'All' && item.category !== selectedCategory) return false;
+
+    // Search Query
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase();
+      const inTitle = item.title.toLowerCase().includes(q);
+      const inAuthor = item.author.toLowerCase().includes(q);
+      const inDesc = item.description.toLowerCase().includes(q);
+      const inTags = item.tags.some(t => t.toLowerCase().includes(q));
+      if (!inTitle && !inAuthor && !inDesc && !inTags) return false;
+    }
+
+    return true;
+  });
+
   return (
-    <div className="max-w-4xl mx-auto px-4 py-16 sm:py-24 text-center flex-1 flex flex-col justify-center items-center">
-      <div className="w-16 h-16 rounded-2xl bg-cyan-500/10 border border-cyan-500/25 flex items-center justify-center text-cyan-400 mb-6 shadow-lg shadow-cyan-500/10">
-        <Users className="w-8 h-8" />
-      </div>
+    <div className="flex-1 flex flex-col bg-black text-white min-h-screen">
+      
+      {/* 1. Hero Banner */}
+      <SkillExchangeHero
+        onOpenCreateModal={handleOpenCreateModal}
+        totalListings={exchanges.length}
+      />
 
-      <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">
-        <Clock className="w-3.5 h-3.5" />
-        <span>Coming in Next Phase</span>
-      </div>
+      {/* Main Content Area */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full flex-1 space-y-10">
+        
+        {/* 2. Filter Toolbar */}
+        <SkillExchangeFilter
+          searchQuery={searchQuery}
+          onSearchChange={setSearchQuery}
+          selectedType={selectedType}
+          onTypeChange={setSelectedType}
+          selectedCategory={selectedCategory}
+          onCategoryChange={setSelectedCategory}
+          categories={categories}
+        />
 
-      <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
-        Peer Skill Exchange & Economy
-      </h1>
-
-      <p className="text-slate-300 text-base max-w-xl leading-relaxed mb-8">
-        Collaborative student guilds where you can mentor peers, teach technical skills, earn SkillCredits, and request 1-on-1 pairing sessions.
-      </p>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-md text-left mb-8">
-        <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
-          <div className="flex items-center space-x-2 text-amber-400 font-semibold text-xs mb-1">
-            <Coins className="w-4 h-4" />
-            <span>SkillCredits Rewards</span>
+        {/* 3. Listings Grid */}
+        <div>
+          <div className="flex items-center justify-between mb-6">
+            <div>
+              <h2 className="text-xl font-bold text-white">Live Peer Exchanges & Bounties</h2>
+              <p className="text-xs text-zinc-400">1-on-1 mentorship pairings and open code review bounties</p>
+            </div>
+            <span className="text-xs text-amber-400 font-mono font-semibold">
+              Showing {filteredExchanges.length} listings
+            </span>
           </div>
-          <p className="text-xs text-slate-400">Earn credits every time you resolve a peer blocker or review code.</p>
+
+          {isLoading ? (
+            <div className="min-h-[30vh] flex flex-col items-center justify-center space-y-3">
+              <RefreshCw className="w-8 h-8 text-white animate-spin" />
+              <p className="text-xs text-zinc-400 font-mono">Loading Peer Guild Marketplace...</p>
+            </div>
+          ) : filteredExchanges.length === 0 ? (
+            <div className="bg-zinc-950 border border-zinc-800 rounded-3xl p-12 text-center space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-zinc-900 flex items-center justify-center text-zinc-400 mx-auto">
+                <Users className="w-6 h-6" />
+              </div>
+              <h3 className="text-base font-bold text-white">No listings match your filter</h3>
+              <p className="text-xs text-zinc-400 max-w-sm mx-auto">
+                Try selecting a different category or be the first to publish a new skill offer or bounty.
+              </p>
+              <button
+                onClick={() => {
+                  setSelectedType('all');
+                  setSelectedCategory('All');
+                  setSearchQuery('');
+                }}
+                className="px-4 py-2 rounded-xl bg-zinc-900 border border-zinc-700 text-xs font-semibold text-white hover:bg-zinc-800 cursor-pointer"
+              >
+                Reset Filters
+              </button>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredExchanges.map(item => (
+                <SkillExchangeCard
+                  key={item.id}
+                  item={item}
+                  onBook={handleOpenBooking}
+                />
+              ))}
+            </div>
+          )}
         </div>
-        <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
-          <div className="flex items-center space-x-2 text-cyan-400 font-semibold text-xs mb-1">
-            <Award className="w-4 h-4" />
-            <span>Reputation Badges</span>
-          </div>
-          <p className="text-xs text-slate-400">On-chain verified contribution ratings and endorsement ranks.</p>
-        </div>
+
+        {/* 4. Escrow Mechanism Visualizer */}
+        <EscrowVisualizer />
+
       </div>
 
-      <Link
-        to="/"
-        className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 text-sm font-medium transition-colors"
-      >
-        <ArrowLeft className="w-4 h-4" />
-        <span>Return to Home</span>
-      </Link>
+      {/* 5. Modals */}
+      <BookingModal
+        item={bookingItem}
+        isOpen={bookingModalOpen}
+        onClose={() => setBookingModalOpen(false)}
+        userProfile={userProfile}
+        onBookingSuccess={handleBookingSuccess}
+      />
+
+      <CreateExchangeModal
+        initialType={createInitialType}
+        isOpen={createModalOpen}
+        onClose={() => setCreateModalOpen(false)}
+        userProfile={userProfile}
+        onCreated={handleCreated}
+      />
+
     </div>
   );
 };

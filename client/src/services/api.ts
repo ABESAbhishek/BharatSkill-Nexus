@@ -11,6 +11,8 @@ import {
   PaymentTransaction,
   X402PaymentRequest,
   PremiumReportResult,
+  SkillExchangeItem,
+  BookingReceipt,
   ApiResponse 
 } from '../types/api';
 
@@ -288,6 +290,71 @@ export async function fetchPremiumReport(serviceId: string): Promise<ApiResponse
   if (!response.ok) {
     const errorData = await response.json().catch(() => ({}));
     throw new Error(errorData.message || `Failed to load premium report (${response.status})`);
+  }
+
+  return response.json();
+}
+
+/**
+ * Fetch all peer skill exchanges (GET /api/skill-exchange)
+ */
+export async function fetchSkillExchanges(): Promise<ApiResponse<SkillExchangeItem[]>> {
+  const url = `${API_BASE_URL}/api/skill-exchange`;
+
+  const response = await fetch(url, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => ({}));
+    throw new Error(errorData.message || `Failed to fetch skill exchanges (${response.status})`);
+  }
+
+  return response.json();
+}
+
+/**
+ * Post a new skill exchange listing (POST /api/skill-exchange/create)
+ */
+export async function postNewSkillExchange(item: Partial<SkillExchangeItem>): Promise<ApiResponse<SkillExchangeItem>> {
+  const url = `${API_BASE_URL}/api/skill-exchange/create`;
+
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(item),
+  });
+
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => ({}));
+    throw new Error(errorData.message || `Failed to create listing (${response.status})`);
+  }
+
+  return response.json();
+}
+
+/**
+ * Book a 1-on-1 session or claim bounty (POST /api/skill-exchange/book)
+ */
+export async function bookPeerSession(exchangeId: string, learnerName: string, scheduledTime?: string): Promise<ApiResponse<any>> {
+  const url = `${API_BASE_URL}/api/skill-exchange/book`;
+
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ exchangeId, learnerName, scheduledTime }),
+  });
+
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => ({}));
+    throw new Error(errorData.message || `Failed to book session (${response.status})`);
   }
 
   return response.json();

@@ -249,11 +249,45 @@ export interface PremiumReportResult {
   loraExplorerUrl?: string;
 }
 
+export interface SkillExchangeItem {
+  id: string;
+  type: 'offer' | 'request';
+  title: string;
+  author: string;
+  authorRole: string;
+  authorAvatar: string;
+  category: string;
+  tags: string[];
+  rate: number;
+  rateUnit: string;
+  rating: number;
+  reviewsCount: number;
+  description: string;
+  availability: string;
+  sessionDuration: string;
+  createdAt?: string;
+}
+
+export interface BookingReceipt {
+  bookingId: string;
+  exchangeId: string;
+  exchangeTitle: string;
+  mentorName: string;
+  learnerName: string;
+  creditsEscrowed: number;
+  sessionTime: string;
+  status: 'escrow_locked' | 'completed';
+  meetingLink: string;
+  timestamp: string;
+}
+
 export interface ApiResponse<T> {
   status: 'success' | 'error';
   message?: string;
   data?: T;
   transaction?: PaymentTransaction;
   result?: PremiumReportResult;
+  receipt?: BookingReceipt;
   stats?: any;
+  count?: number;
 }
