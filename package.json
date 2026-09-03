@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "BharatSkill Nexus - An Agentic Skill-to-Opportunity Ecosystem powered by x402 & Algorand",
   "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
   "scripts": {
     "dev": "concurrently -n \"SERVER,CLIENT\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run dev:server\" \"npm run dev:client\"",
     "dev:server": "npm run dev --prefix server",
@@ -10,10 +14,11 @@
     "build": "npm run build:server && npm run build:client",
     "build:server": "npm run build --prefix server",
     "build:client": "npm run build --prefix client",
-    "install:all": "npm install && npm install --prefix server && npm install --prefix client"
+    "install:all": "npm install"
   },
   "devDependencies": {
-    "concurrently": "^9.1.2"
+    "concurrently": "^9.1.2",
+    "typescript": "^5.7.3"
   },
   "keywords": [
     "bharatskill-nexus",
