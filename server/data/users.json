@@ -71,5 +71,27 @@
     "profileStrength": 96,
     "createdAt": "2026-09-02T07:54:07.110Z",
     "updatedAt": "2026-09-02T07:54:07.110Z"
+  },
+  {
+    "id": "bsn_1788421839176_7jcq5",
+    "name": "Test Student",
+    "email": "test.student@example.com",
+    "location": "Delhi, India",
+    "education": "B.Tech CSE",
+    "skills": [
+      "React",
+      "TypeScript",
+      "Python"
+    ],
+    "interests": [
+      "Web Development",
+      "Artificial Intelligence"
+    ],
+    "careerGoal": "Full-Stack Developer",
+    "experienceLevel": "Intermediate",
+    "learningPreference": "Build Projects",
+    "profileStrength": 86,
+    "createdAt": "2026-09-03T07:50:39.175Z",
+    "updatedAt": "2026-09-03T07:50:39.175Z"
   }
 ]
