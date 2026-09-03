@@ -14,16 +14,9 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// API Routes
+// Support both /api and root paths for direct & Vercel serverless routing
 app.use('/api', routes);
-
-// 404 Route Handler
-app.use('*', (_req: Request, res: Response) => {
-  res.status(404).json({
-    status: 'error',
-    message: 'Resource not found'
-  });
-});
+app.use('/', routes);
 
 // Centralized Error Handling Middleware
 app.use(errorHandler);

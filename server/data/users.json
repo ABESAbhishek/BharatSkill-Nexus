@@ -93,5 +93,27 @@
     "profileStrength": 86,
     "createdAt": "2026-09-03T07:50:39.175Z",
     "updatedAt": "2026-09-03T07:50:39.175Z"
+  },
+  {
+    "id": "bsn_1788423482974_2bjao",
+    "name": "Vercel Test Student",
+    "email": "vercel.test@example.com",
+    "location": "Bengaluru, India",
+    "education": "B.Tech Computer Science",
+    "skills": [
+      "React",
+      "TypeScript",
+      "Node.js"
+    ],
+    "interests": [
+      "Web Development",
+      "Blockchain"
+    ],
+    "careerGoal": "Full-Stack Web3 Engineer",
+    "experienceLevel": "Intermediate",
+    "learningPreference": "Build Projects",
+    "profileStrength": 86,
+    "createdAt": "2026-09-03T08:18:02.974Z",
+    "updatedAt": "2026-09-03T08:18:02.974Z"
   }
 ]
