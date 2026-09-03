@@ -8,7 +8,7 @@ const app: Express = express();
 
 // Security & Parsing Middlewares
 app.use(cors({
-  origin: config.clientUrl || 'http://localhost:5173',
+  origin: '*',
   credentials: true
 }));
 app.use(express.json());
@@ -28,14 +28,16 @@ app.use('*', (_req: Request, res: Response) => {
 // Centralized Error Handling Middleware
 app.use(errorHandler);
 
-// Start Server
-app.listen(config.port, () => {
-  console.log(`========================================`);
-  console.log(` BharatSkill Nexus Server is running`);
-  console.log(` Port: ${config.port}`);
-  console.log(` Environment: ${config.nodeEnv}`);
-  console.log(` Health: http://localhost:${config.port}/api/health`);
-  console.log(`========================================`);
-});
+// Start Server locally if not running in serverless environment (Vercel)
+if (!process.env.VERCEL && process.env.NODE_ENV !== 'test') {
+  app.listen(config.port, () => {
+    console.log(`========================================`);
+    console.log(` BharatSkill Nexus Server is running`);
+    console.log(` Port: ${config.port}`);
+    console.log(` Environment: ${config.nodeEnv}`);
+    console.log(` Health: http://localhost:${config.port}/api/health`);
+    console.log(`========================================`);
+  });
+}
 
 export default app;
