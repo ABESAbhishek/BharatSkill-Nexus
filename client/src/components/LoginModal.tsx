@@ -27,6 +27,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
       const response = await fetchProfileByEmail(email.trim());
       if (response.data) {
         localStorage.setItem('bsn_user_profile', JSON.stringify(response.data));
+        window.dispatchEvent(new Event('storage'));
         onClose();
         navigate('/profile');
       } else {
@@ -57,6 +58,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
     };
 
     localStorage.setItem('bsn_user_profile', JSON.stringify(demoProfile));
+    window.dispatchEvent(new Event('storage'));
     onClose();
     navigate('/profile');
   };

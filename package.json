@@ -2,6 +2,7 @@
   "name": "bharatskill-nexus",
   "version": "1.0.0",
   "description": "BharatSkill Nexus - An Agentic Skill-to-Opportunity Ecosystem powered by x402 & Algorand",
+  "type": "module",
   "private": true,
   "workspaces": [
     "client",

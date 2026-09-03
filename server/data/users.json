@@ -115,5 +115,29 @@
     "profileStrength": 86,
     "createdAt": "2026-09-03T08:18:02.974Z",
     "updatedAt": "2026-09-03T08:18:02.974Z"
+  },
+  {
+    "id": "bsn_1788427565133_ui642",
+    "name": "Abhishek",
+    "email": "abhishek@example.com",
+    "location": "Ghaziabad, India",
+    "education": "B.Tech CSE",
+    "skills": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Python"
+    ],
+    "interests": [
+      "Web Development",
+      "Artificial Intelligence",
+      "Blockchain"
+    ],
+    "careerGoal": "AI & Full-Stack Engineer",
+    "experienceLevel": "Intermediate",
+    "learningPreference": "Build Projects",
+    "profileStrength": 95,
+    "createdAt": "2026-09-03T09:26:05.129Z",
+    "updatedAt": "2026-09-03T09:26:05.129Z"
   }
 ]
