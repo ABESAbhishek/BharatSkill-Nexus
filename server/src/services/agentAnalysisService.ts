@@ -59,41 +59,43 @@ const DOMAIN_SKILLS: Record<string, string[]> = {
   'Entrepreneurship': ['Product Strategy', 'Market Validation', 'Pitching & Storytelling', 'Financial Modeling', 'Growth Marketing']
 };
 
-/**
- * Ensure storage file exists
- */
-function ensureDataFile(): string {
-  const filePath = getStorageFilePath();
-  const dir = path.dirname(filePath);
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
-  if (!fs.existsSync(filePath)) {
-    fs.writeFileSync(filePath, JSON.stringify([], null, 2), 'utf-8');
-  }
-  return filePath;
-}
+// In-memory analysis store for serverless environments
+let memoryAnalyses: AgentAnalysisReport[] = [];
 
 /**
- * Read all stored analyses
+ * Read all stored analyses with memory fallback
  */
 export function readAnalyses(): AgentAnalysisReport[] {
-  const filePath = ensureDataFile();
   try {
-    const raw = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(raw) as AgentAnalysisReport[];
+    const filePath = getStorageFilePath();
+    if (fs.existsSync(filePath)) {
+      const raw = fs.readFileSync(filePath, 'utf-8');
+      const data = JSON.parse(raw) as AgentAnalysisReport[];
+      if (Array.isArray(data) && data.length > 0) {
+        memoryAnalyses = data;
+      }
+    }
   } catch (error) {
-    console.error('Error reading analyses.json, returning empty list:', error);
-    return [];
+    // Silently fall back to memory on serverless
   }
+  return memoryAnalyses;
 }
 
 /**
- * Write analyses to JSON storage
+ * Write analyses to JSON storage with safe catch
  */
 export function writeAnalyses(analyses: AgentAnalysisReport[]): void {
-  const filePath = ensureDataFile();
-  fs.writeFileSync(filePath, JSON.stringify(analyses, null, 2), 'utf-8');
+  memoryAnalyses = analyses;
+  try {
+    const filePath = getStorageFilePath();
+    const dir = path.dirname(filePath);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+    fs.writeFileSync(filePath, JSON.stringify(analyses, null, 2), 'utf-8');
+  } catch (error) {
+    // Harmless in serverless environment
+  }
 }
 
 /**

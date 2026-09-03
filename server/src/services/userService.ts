@@ -10,8 +10,7 @@ const getStorageFilePath = (): string => {
   if (fs.existsSync(path.join(cwd, 'data'))) {
     return path.join(cwd, 'data', 'users.json');
   }
-  const fallback = path.resolve(cwd, 'data');
-  return path.join(fallback, 'users.json');
+  return path.resolve(cwd, 'data', 'users.json');
 };
 
 export interface UserProfile {
@@ -32,6 +31,25 @@ export interface UserProfile {
 
 export type CreateProfileInput = Omit<UserProfile, 'id' | 'profileStrength' | 'createdAt' | 'updatedAt'>;
 
+// In-memory user store for serverless environments
+let memoryUsers: UserProfile[] = [
+  {
+    id: "usr_aarav",
+    name: "Aarav Patel",
+    email: "aarav.patel@example.com",
+    location: "Bengaluru, Karnataka",
+    education: "B.Tech Computer Science (3rd Year)",
+    skills: ["React", "TypeScript", "Node.js", "Tailwind CSS", "REST APIs"],
+    interests: ["Web Development", "Artificial Intelligence", "Blockchain"],
+    careerGoal: "Full-Stack Developer Intern",
+    experienceLevel: "Intermediate",
+    learningPreference: "Build Projects",
+    profileStrength: 95,
+    createdAt: "2026-08-30T10:00:00.000Z",
+    updatedAt: "2026-08-30T10:00:00.000Z"
+  }
+];
+
 /**
  * Calculate Profile Completeness Score (0-100%)
  */
@@ -46,7 +64,7 @@ export function calculateProfileStrength(data: Partial<CreateProfileInput>): num
 
   // Skills (25%)
   if (data.skills && data.skills.length > 0) {
-    score += Math.min(25, data.skills.length * 5); // 5 points per skill up to 25
+    score += Math.min(25, data.skills.length * 5);
   }
 
   // Interests & Goal (25%)
@@ -63,40 +81,39 @@ export function calculateProfileStrength(data: Partial<CreateProfileInput>): num
 }
 
 /**
- * Ensure storage directory and file exist
- */
-function ensureDataFile(): string {
-  const filePath = getStorageFilePath();
-  const dir = path.dirname(filePath);
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
-  if (!fs.existsSync(filePath)) {
-    fs.writeFileSync(filePath, JSON.stringify([], null, 2), 'utf-8');
-  }
-  return filePath;
-}
-
-/**
- * Read all user profiles from JSON storage
+ * Read all user profiles from JSON storage with memory fallback
  */
 export function readUsers(): UserProfile[] {
-  const filePath = ensureDataFile();
   try {
-    const raw = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(raw) as UserProfile[];
+    const filePath = getStorageFilePath();
+    if (fs.existsSync(filePath)) {
+      const raw = fs.readFileSync(filePath, 'utf-8');
+      const data = JSON.parse(raw) as UserProfile[];
+      if (Array.isArray(data) && data.length > 0) {
+        memoryUsers = data;
+      }
+    }
   } catch (error) {
-    console.error('Error reading users.json, returning empty list:', error);
-    return [];
+    // Silently fall back to memory on serverless environments
   }
+  return memoryUsers;
 }
 
 /**
- * Write user profiles to JSON storage
+ * Write user profiles with safe serverless catch
  */
 export function writeUsers(users: UserProfile[]): void {
-  const filePath = ensureDataFile();
-  fs.writeFileSync(filePath, JSON.stringify(users, null, 2), 'utf-8');
+  memoryUsers = users;
+  try {
+    const filePath = getStorageFilePath();
+    const dir = path.dirname(filePath);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+    fs.writeFileSync(filePath, JSON.stringify(users, null, 2), 'utf-8');
+  } catch (error) {
+    // Harmless in serverless environment (read-only file system)
+  }
 }
 
 /**
@@ -104,7 +121,7 @@ export function writeUsers(users: UserProfile[]): void {
  */
 export function createUserProfile(input: CreateProfileInput): UserProfile {
   const users = readUsers();
-  const existingIndex = users.findIndex(u => u.email.toLowerCase() === input.email.toLowerCase());
+  const existingIndex = users.findIndex(u => u.email?.toLowerCase() === input.email?.toLowerCase());
   const now = new Date().toISOString();
   const profileStrength = calculateProfileStrength(input);
 
@@ -146,5 +163,5 @@ export function getUserById(id: string): UserProfile | null {
  */
 export function getUserByEmail(email: string): UserProfile | null {
   const users = readUsers();
-  return users.find(u => u.email.toLowerCase() === email.toLowerCase()) || null;
+  return users.find(u => u.email?.toLowerCase() === email?.toLowerCase()) || null;
 }
